@@ -6,8 +6,7 @@ import Home from "./pages/home";
 import About from "./pages/about"; 
 import Contact from "./pages/contact";
 import Blogs from "./pages/blog";
-import Services from "./pages/Services";
-import singleBlog from "./pages/singleBlog";
+import Services from "./pages/Services"; 
 
 const router = createBrowserRouter([
   {
@@ -46,14 +45,7 @@ const router = createBrowserRouter([
       element: <Contact />    
     },
 
-    {
-      
-      path:  "/blogs/:id",
-      element: <singleBlog />,
-      // NOTE: `localhost` will not work in production.
-      // Replace with your production API URL or an environment variable.
-      loader: ({params}) => fetch(`http://localhost:5000/blogs/${params.id}`)    
-    }
+  
 
 
   ]
