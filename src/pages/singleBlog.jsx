@@ -2,7 +2,7 @@ import React from 'react'
 import { FaClock, FaUser } from 'react-icons/fa6';
 import { useLoaderData } from 'react-router';
 
-const singleBlog = () => {
+const SingleBlog = () => {
     const data = useLoaderData();
     const {title, image, category, author, published_date, reading_time, content} = data[0]
   return (
@@ -75,4 +75,4 @@ const singleBlog = () => {
   )
 }
 
-export default singleBlog
+export default SingleBlog
