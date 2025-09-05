@@ -7,7 +7,7 @@ import About from "./pages/about";
 import Contact from "./pages/contact";
 import Blogs from "./pages/blog";
 import Services from "./pages/Services";
-import SingleBlog from "./pages/SingleBlog";
+import singleBlog from "./pages/singleBlog";
 
 const router = createBrowserRouter([
   {
