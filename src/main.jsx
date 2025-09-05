@@ -7,7 +7,7 @@ import About from "./pages/about";
 import Contact from "./pages/contact";
 import Blogs from "./pages/blog";
 import Services from "./pages/Services";
-import SingleBlog from "./pages/singleBlog";
+import SingleBlog from "./pages/SingleBlog";
 
 const router = createBrowserRouter([
   {
@@ -50,6 +50,8 @@ const router = createBrowserRouter([
       
       path:  "/blogs/:id",
       element: <SingleBlog />,
+      // NOTE: `localhost` will not work in production.
+      // Replace with your production API URL or an environment variable.
       loader: ({params}) => fetch(`http://localhost:5000/blogs/${params.id}`)    
     }
 
@@ -66,4 +68,3 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <RouterProvider router={router} />
   </React.StrictMode>,
 )
-
