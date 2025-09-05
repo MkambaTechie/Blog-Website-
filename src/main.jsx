@@ -7,50 +7,50 @@ import About from "./pages/about";
 import Contact from "./pages/contact";
 import Blogs from "./pages/blog";
 import Services from "./pages/Services";
-import singleBlog from "./pages/singleBlog";
+import SingleBlog from "./pages/singleBlog";
 
 const router = createBrowserRouter([
   {
-    path:  "/",
+    path:  "/",
     element: <App />,
     children: [
       {
-      path:  "/",
-      element: <Home />    
+      path:  "/",
+      element: <Home />    
     },
 
     {
-       
-      path:  "/services",
+        
+      path:  "/services",
       element: <Services /> 
           
     },
 
     {
-       
-      path:  "/blog",
+        
+      path:  "/blog",
       element: <Blogs /> 
           
     },
 
     {
       
-      path:  "/about",
+      path:  "/about",
       element: <About /> 
           
     },
 
     {
       
-      path:  "/contact",
-      element: <Contact />    
+      path:  "/contact",
+      element: <Contact />    
     },
 
     {
       
-      path:  "/blogs/:id",
-      element: <singleBlog />,
-      loader: ({params}) => fetch(`http://localhost:5000/blogs/${params.id}`)    
+      path:  "/blogs/:id",
+      element: <SingleBlog />,
+      loader: ({params}) => fetch(`http://localhost:5000/blogs/${params.id}`)    
     }
 
 
@@ -66,3 +66,4 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <RouterProvider router={router} />
   </React.StrictMode>,
 )
+
